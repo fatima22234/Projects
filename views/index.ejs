@@ -1,0 +1,46 @@
+<%- include("partials/header.ejs") %>
+
+<div class="container">
+<div class="heading">
+<h1 >Todo List </h1>
+</div>
+<div class="heading">
+    <% const months=["January","February", "March","April","June","July","August","September","October","November","December"] %>
+    <% const week=["Sun","Mon","Tue","Wed","thu","Fri","Sat"] %>
+    <% const d= new Date()  %>
+<h2><%= week[d.getDay()]%>,<%= d.getDate() %> <%= months[d.getMonth()]  %>  %></h2>
+</div>
+<div >
+<% if (locals.addtask && locals.lengthOfList){ %>
+    <%for(var i=0;i<lengthOfList;i++){ %>
+        <div class="textdiv boxsize">
+        <h3>
+            <input type="checkbox" name="taskCheckbox" id="checkbox<%= i %>" data-task-id="taskText<%= i %>" onclick="strikeThroughText(this)">
+            <span id="taskText<%= i %>"><%= locals.addtask[i] %></span>
+            
+          </h3>
+          
+        </div>
+        <hr>
+    <% } %> 
+
+<% } %>
+
+
+
+
+
+<div class="positioning">
+
+<form action="/submit" method="POST">
+   <input type="text" name="task" class="boxsize textdiv">
+   <div ><input type="submit" value="+" class="addbutton boxsize"></div>
+    
+    
+</form>
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script src="/client.js"></script>

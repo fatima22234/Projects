@@ -1,0 +1,37 @@
+<%- include("partials/header.ejs") %>
+<div class="container">
+<div class="heading">
+<h1 >Todo List </h1>
+</div>
+<div class="heading">
+<h2>Work tasks</h2>
+</div>
+<div>
+
+<% if (locals.Work && locals.Leng){ %>
+    <%for(var i=0;i<Leng;i++){ %>
+        <div class="textdiv boxsize">
+        <h3>
+            <input type="checkbox" name="taskCheckbox" id="checkboxforwork<%= i %>" data-task-id="taskTextwork<%= i %>" onclick="strikeThroughText(this)">
+            <span id="taskTextwork<%= i %>"><%= locals.Work[i] %></span>
+          </h3>
+        </div>
+        <hr>
+    <% } %> 
+
+<% } %>
+   
+
+
+<div class="positioning">
+<form action="/worksubmit" method="POST">
+   <input type="text" name="task" class="boxsize textdiv" >
+    <input type="submit" value="+" class="addbutton boxsize">
+    
+</form>
+</div>
+</div>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+<script src="/client.js"></script>

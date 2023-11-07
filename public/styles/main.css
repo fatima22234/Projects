@@ -1,0 +1,99 @@
+li{
+    list-style-type: none;
+}
+.navbar{
+    display: flex;
+}
+
+.but{
+    background-color: #9F0D7F;
+    border-radius: 15%;
+    margin-top: 25%;
+}
+
+ul{
+    display: flex;
+    gap: 30px;
+    flex-direction: row;
+}
+.container{
+    display: flex;
+    align-items:center ;
+    justify-content: center;
+    flex-direction: column;
+    
+    
+
+}
+.boxsize{
+    box-sizing: border-box;
+    width: 400px;
+    height: 80px;
+    border-style: none;
+    
+}
+.textdiv{
+    display: flex;
+    background-color: #FFE5E5;
+    
+
+}
+.addbutton{
+    border-radius: 50%;
+    border-style: none;
+    background-color: #79155B;
+    width: 5rem;
+    height: 5rem;
+    font-size: 3rem;
+    color: #FFE5E5;
+
+    
+    
+    
+
+}
+hr{
+    width: 400px;
+    margin: 0%;
+    padding: 0%;
+    border-top: 1px solid rgb(221, 219, 219)
+}
+
+body{
+    background-image: url("../images/wepik-export-2023091208362767V4.png");
+    background-attachment: fixed;
+
+  /* Center the background image */
+  background-position: center;
+
+  /* Set the background image to no repeat */
+  background-repeat: no-repeat;
+
+  /* Scale the background image to be as large as possible */
+  background-size: cover;
+  color: #9F0D7F;
+}
+
+.main{
+    background-image: url("../images/pic2.jpg");
+    background-position: center;
+
+    /* Set the background image to no repeat */
+    background-repeat: no-repeat;
+  
+    /* Scale the background image to be as large as possible */
+    background-size: cover;
+    color:black;
+}
+.heading{
+    text-align: center;
+    background-color: #FFE5E5;
+    margin-bottom: 2%;
+    width: 15rem;
+    height: 5rem;
+    font-size: 1.3rem;
+     border-radius: 10%;
+}
+.positioning{
+    text-align: center;
+}
